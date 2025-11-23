@@ -1,0 +1,93 @@
+[
+{
+    "nome": "Arroz Parboilizado (1kg)",
+    "imagem": "imagens/arroz.jpg",
+    "preco": "5.99",
+    "descricao": "Arroz branco tipo 1, ideal para o dia a dia da sua família.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Feijão Carioca (1kg)",
+    "imagem": "imagens/feijao.jpg",
+    "preco": "8.49",
+    "descricao": "Feijão carioca tipo 1, grãos selecionados para um caldo mais cremoso.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Óleo de Soja Sinhá (500ml)",
+    "imagem": "imagens/oleo.jpg",
+    "preco": "4.29",
+    "descricao": "Óleo de soja refinado, perfeito para frituras e refogados.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Café em Pó (500g)",
+    "imagem": "imagens/cafe.jpg",
+    "preco": "11.50",
+    "descricao": "Café torrado e moído, sabor intenso e aroma marcante.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Açúcar Branca de Neve Cristal Triturado (1kg)",
+    "imagem": "imagens/acucar.jpg",
+    "preco": "5.20",
+    "descricao": "Açúcar refinado de alta qualidade para adoçar suas receitas.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Leite Integral Italac (1L)",
+    "imagem": "imagens/leite.jpg",
+    "preco": "5.19",
+    "descricao": "Leite longa vida integral, fonte de cálcio e vitaminas.",
+    "categoria": "laticinios"
+},
+{
+    "nome": "Papel Higiênico Paloma Folha Dupla (Pacote c/ 4 Rolos)",
+    "imagem": "imagens/papelh.jpg",
+    "preco": "6.79",
+    "descricao": "Papel higienico mais macio e resistente. Pacote tradicional com 4 rolos.",
+    "categoria": "limpeza"
+},
+{
+    "nome": "Refrigerante Coca-Cola (2L)",
+    "imagem": "imagens/refrigerante.jpg",
+    "preco": "12.50",
+    "descricao": "Refrigerante sabor cola, refrescante e ideal para compartilhar.",
+    "categoria": "bebidas"
+},
+{
+    "nome": "Refrigerante Coca-Cola (350 ml)",
+    "imagem": "imagens/refrigerantelata.jpg",
+    "preco": "4.50",
+    "descricao": "Dose individual do refrigerante mais vendido.",
+    "categoria": "bebidas"
+},
+{
+    "nome": "Guaraná Jesus Lata (350ml)",
+    "imagem": "imagens/guaranajesus.jpg",
+    "preco": "4.50",
+    "descricao": "Refrigerante muito doce com toque de cravo e canela, ícone absoluto no nosso Maranhão.",
+    "categoria": "bebidas"
+},
+{
+    "nome": "Detergente Líquido Nutrilar Neutro (500ml)",
+    "imagem": "imagens/detergente.jpg",
+    "preco": "2.50",
+    "descricao": "Detergente lava-louças com bom poder desengordurante e formação de espuma.",
+    "categoria": "limpeza"
+},
+{
+    "nome": "Lava Roupas Líquido Nutrilar Suavidade (1L)",
+    "imagem": "imagens/lavaroupa.jpg",
+    "preco": "6.90",
+    "descricao": "Sabão líquido econômico que dilui facilmente e evita manchas de resíduos na roupa.",
+    "categoria": "limpeza"
+},
+{
+    "nome": "Leite em Pó Italac (200g)",
+    "imagem": "imagens/leitepo.jpg",
+    "preco": "6.25",
+    "descricao": "Versão em sachê, prática e compacta. Leite integral que dissolve bem, rico em cálcio e vitaminas.",
+    "categoria": "laticinios"
+}
+]

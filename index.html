@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações de metadados e links de estilo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mercadinho Fatilicias</title>
+</head>
+<body>
+    <!-- Cabeçalho principal com logo, título, busca e carrinho -->
+    <header>
+        <div class="titulo-container">
+            <img src="imagens/logo.png" alt="Mercadinho Fatilicias" class="logo">
+            <h1>Mercadinho Fatilicias</h1>
+        </div>
+        <div>
+            <input type="text" id="campo-busca" placeholder="Digite um produto">
+            <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
+        </div>
+        <div class="carrinho-container" onclick="mostrarCarrinho()">
+            <!-- Ícone do carrinho embutido como SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="carrinho-icone">
+                <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span id="contador-carrinho">0</span>
+        </div>
+    </header>
+
+    <!-- Navegação por categorias -->
+    <nav id="categorias-nav" class="categorias-nav">
+        <!-- Links das categorias serão inseridos aqui pelo script.js -->
+    </nav>
+
+    <!-- Conteúdo principal onde os produtos são exibidos -->
+    <main>
+        <section class="card-container">
+            <!-- Os produtos serão carregados aqui pelo script.js -->
+        </section>
+    </main>
+
+    <!-- Rodapé com links para redes sociais -->
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="https://github.com/GabrielBrandaoF" target="_blank">GitHub Dev</a></li>
+            <li><a href="https://www.instagram.com/gabrielbrand._/" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/5598992298040?text=Olá,%20gostaria%20de%20realizar%20um%20pedido%20no%20Mercadinho%20Fatilicias." target="_blank">WhatsApp</a></li>
+        </ul>
+    </footer>
+
+    <!-- Janela Modal para exibir os itens do carrinho -->
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h2>Meu Carrinho</h2>
+                <span class="fechar-modal" onclick="fecharCarrinho()">&times;</span>
+            </div>
+            <div id="itens-carrinho" class="modal-corpo"></div>
+            <div id="modal-rodape" class="modal-rodape">
+                <!-- Seção para a lista de texto copiável -->
+                <h3 class="lista-copiar-titulo">Lista para Copiar:</h3>
+                <textarea id="lista-carrinho-texto" readonly></textarea>
+                <p>Total: <span id="total-carrinho">R$ 0.00</span></p>
+                <p class="info-pagamento">Pagamento presencialmente ou PIX pelo WhatsApp.</p>
+                <button id="botao-copiar" onclick="copiarLista()">Copiar Lista</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
