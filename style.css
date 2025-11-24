@@ -341,6 +341,7 @@ article a:hover {
 
 .item-carrinho span:nth-child(2) {
     margin: 0 1rem; /* Adiciona margem ao redor do preço */
+    white-space: nowrap; /* Impede que o preço quebre em duas linhas */
 }
 
 .botao-remover-item {
