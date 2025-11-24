@@ -95,29 +95,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Funções do Carrinho ---
     function adicionarAoCarrinho(produto) {
-        // Adiciona um ID único a cada item para facilitar a remoção
-        const itemNoCarrinho = {
-            ...produto,
-            idUnico: Date.now() // Usamos um timestamp como ID único
-        };
-        carrinho.push(itemNoCarrinho);
+        // Verifica se o produto já existe no carrinho pelo nome
+        const itemExistente = carrinho.find(item => item.nome === produto.nome);
+
+        if (itemExistente) {
+            // Se existir, apenas incrementa a quantidade
+            itemExistente.quantidade++;
+        } else {
+            // Se não existir, adiciona o produto com quantidade 1
+            carrinho.push({ ...produto, quantidade: 1 });
+        }
+
         atualizarContadorCarrinho();
         // Você pode adicionar uma notificação mais elegante aqui depois
         console.log(`"${produto.nome}" foi adicionado ao carrinho!`);
     }
 
-    function removerDoCarrinho(idUnico) {
-        // Encontra o índice do item a ser removido
-        const itemIndex = carrinho.findIndex(item => item.idUnico === idUnico);
+    function removerDoCarrinho(nomeProduto) {
+        const itemIndex = carrinho.findIndex(item => item.nome === nomeProduto);
         if (itemIndex > -1) {
-            carrinho.splice(itemIndex, 1); // Remove o item do array
+            const item = carrinho[itemIndex];
+            item.quantidade--; // Diminui a quantidade
+
+            if (item.quantidade === 0) {
+                carrinho.splice(itemIndex, 1); // Remove o item se a quantidade for zero
+            }
+
             atualizarContadorCarrinho();
             mostrarCarrinho(); // Atualiza a exibição do modal do carrinho
         }
     }
 
     function atualizarContadorCarrinho() {
-        document.getElementById('contador-carrinho').textContent = carrinho.length;
+        // Soma a quantidade total de todos os itens no carrinho
+        const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
+        document.getElementById('contador-carrinho').textContent = totalItens;
     }
 
     // Expondo funções para o HTML (onclick)
@@ -142,25 +154,25 @@ document.addEventListener('DOMContentLoaded', () => {
             carrinho.forEach(item => {
                 const itemDiv = document.createElement('div');
                 itemDiv.classList.add('item-carrinho');
-                // Adiciona o botão de remover com o ID único do item
+                // Agora exibe a quantidade e o botão de remover usa o nome do produto
                 itemDiv.innerHTML = `
-                    <span>${item.nome}</span>
-                    <span>R$ ${item.preco}</span>
-                    <button class="botao-remover-item" data-id="${item.idUnico}">&times;</button>
+                    <span>${item.quantidade}x ${item.nome}</span>
+                    <span class="item-preco">R$ ${(parseFloat(item.preco) * item.quantidade).toFixed(2)}</span>
+                    <button class="botao-remover-item" data-nome="${item.nome}">&times;</button>
                 `;
                 itensCarrinhoDiv.appendChild(itemDiv);
-                total += parseFloat(item.preco);
-                textoParaCopiar += `- ${item.nome}\n`;
+                total += parseFloat(item.preco) * item.quantidade;
+                textoParaCopiar += `- ${item.quantidade}x ${item.nome}\n`;
             });
 
             textoParaCopiar += `\nTotal: R$ ${total.toFixed(2)}`;
             listaTexto.value = textoParaCopiar;
             totalCarrinhoSpan.textContent = `R$ ${total.toFixed(2)}`;
         }
-
+        
         // Adiciona os event listeners para os novos botões de remover
         document.querySelectorAll('.botao-remover-item').forEach(botao => {
-            botao.addEventListener('click', () => removerDoCarrinho(parseInt(botao.dataset.id)));
+            botao.addEventListener('click', () => removerDoCarrinho(botao.dataset.nome));
         });
         modal.style.display = 'block';
     }
