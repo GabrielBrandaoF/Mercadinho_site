@@ -49,14 +49,14 @@
     "categoria": "limpeza"
 },
 {
-    "nome": "Refrigerante Coca-Cola (2L)",
+    "nome": "Refrigerante Coca Cola (2L)",
     "imagem": "imagens/refrigerante.jpg",
     "preco": "12.50",
     "descricao": "Refrigerante sabor cola, refrescante e ideal para compartilhar.",
     "categoria": "bebidas"
 },
 {
-    "nome": "Refrigerante Coca-Cola (350 ml)",
+    "nome": "Refrigerante Coca Cola (350 ml)",
     "imagem": "imagens/refrigerantelata.jpg",
     "preco": "4.50",
     "descricao": "Dose individual do refrigerante mais vendido.",
