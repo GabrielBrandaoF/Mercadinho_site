@@ -62,11 +62,25 @@
                 <textarea id="lista-carrinho-texto" readonly></textarea>
                 <p>Total: <span id="total-carrinho">R$ 0.00</span></p>
                 <p class="info-pagamento">Pagamento presencialmente ou PIX pelo WhatsApp.</p>
-                <button id="botao-copiar" onclick="copiarLista()">Copiar Lista</button>
+                <div class="modal-botoes">
+                    <button id="botao-copiar" onclick="copiarLista()">Copiar Lista</button>
+                    <button id="botao-whatsapp" onclick="enviarPedidoWhatsApp()">Enviar via WhatsApp</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function enviarPedidoWhatsApp() {
+            const listaTexto = document.getElementById('lista-carrinho-texto').value;
+            const totalCarrinho = document.getElementById('total-carrinho').innerText;
+            const numeroWhatsApp = "5598992298040"; // Coloque aqui o número de telefone do mercadinho
+
+            const mensagem = `Olá, gostaria de fazer o seguinte pedido:\n\n${listaTexto}\nTotal: ${totalCarrinho}`;
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
 </body>
 </html>
