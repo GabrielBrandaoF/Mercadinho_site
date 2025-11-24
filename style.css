@@ -430,17 +430,25 @@ article a:hover {
 
 @media (max-width: 768px) {
     header { /* Estilos para telas com largura máxima de 768px */
-        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
-        padding: 1rem; /* Reduz o espaçamento interno */
+        flex-direction: row; /* Itens em linha */
+        justify-content: space-between; /* Espaço entre os itens */
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
+        padding: 0.5rem 1rem; /* Reduz o espaçamento interno */
+        gap: 0.5rem;
+    }
+
+    .logo {
+        height: 50px; /* Diminui o tamanho do logo em telas menores */
     }
 
     .categorias-nav {
-        top: 185px; /* Ajusta a posição sticky para o novo tamanho do header */
+        top: 85px; /* Ajusta a posição sticky para o novo tamanho do header */
         gap: 0.5rem;
     }
 
     .card-container {
         grid-template-columns: 1fr; /* Volta para uma coluna em telas menores */
+        gap: 1rem;
     }
 
     header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
@@ -449,7 +457,7 @@ article a:hover {
     }
 
     div input { /* Estilos para o input em telas menores */
-        width: 90vw; /* Largura baseada na largura da viewport */
+        width: 100%; /* Ocupa a largura do container pai */
         font-size: 1.2rem; /* Reduz o tamanho da fonte */
     }
 
@@ -468,14 +476,13 @@ article a:hover {
 
 @media (max-width: 480px) {
     header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-        max-width: 70%; /* Define uma largura máxima */
-        word-wrap: break-word; /* Permite a quebra de palavras longas */
+        display: none; /* Oculta o texto do título em telas muito pequenas */
     }
 
     div input, /* Estilos para o input e seu placeholder em telas muito pequenas */
     div input::placeholder {
         font-size: 1rem; /* Reduz o tamanho da fonte */
+        margin-right: 0;
     }
 
     article h2 { /* Estilos para o h2 do article em telas muito pequenas */
@@ -485,13 +492,13 @@ article a:hover {
     div { /* Estilos para a div do cabeçalho em telas muito pequenas */
         display: flex; /* Habilita flexbox */
         align-items: center; /* Alinha itens ao centro */
-        justify-content: center; /* Centraliza itens */
-        flex-direction: column; /* Organiza em coluna */
+        flex-grow: 1; /* Permite que a div da busca cresça */
+        flex-direction: row; /* Garante que o input e o botão fiquem em linha */
         gap: 0.5rem; /* Espaçamento entre os itens */
     }
 
     .categorias-nav {
-        top: 215px; /* Ajuste para telas muito pequenas */
+        top: 77px; /* Ajuste para telas muito pequenas */
         font-size: 0.9rem;
     }
 
