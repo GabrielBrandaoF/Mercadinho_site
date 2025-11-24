@@ -1,21 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    scroll-behavior: smooth;
 }
 
 :root {
-    --primary-color: #B87333; /* Cor primária (azul claro) */
-    --secondary-color: #B87333; /* Cor secundária (cinza claro) */
-    --tertiary-color: #606163 ; /* Cor terciária (cinza médio) */
-    --bg-color: #141414; /* Cor de fundo (cinza escuro) */
+    --primary-color: #E0A055; /* Um bronze/dourado mais vibrante */
+    --bg-color: #121212;      /* Fundo quase preto, bem moderno */
+    --surface-color: #1E1E1E; /* Cor para superfícies como cards */
+    --text-primary: #F1F1F1;  /* Branco suave para texto principal */
+    --text-secondary: #A0A0A0;/* Cinza claro para texto secundário */
+    --border-color: #2c2c2c;  /* Cor para bordas sutis */
 }
 
 body {
     margin: 0; /* Remove a margem padrão do body */
     background: var(--bg-color); /* Define a cor de fundo usando uma variável */
-    color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Special Gothic Expanded One", sans-serif; /* Define a família da fonte */
+    color: var(--text-primary); /* Define a cor do texto padrão usando uma variável */
+    font-family: 'Poppins', sans-serif; /* Nova fonte, mais moderna e legível */
+    font-weight: 400;
 }
 
 header {
@@ -24,10 +28,11 @@ header {
     align-items: center; /* Alinha os itens verticalmente ao centro */
     justify-content: space-around; /* Distribui os itens com espaço ao redor */
     position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
-    top: 0; /* Posição do topo quando sticky */
-    background-color: #000000; /* Cor de fundo do cabeçalho (alterada) */
+    top: 0;
+    background-color: rgba(18, 18, 18, 0.8); /* Fundo com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
     z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
-    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior */
+    border-bottom: 1px solid var(--border-color); /* Borda inferior sutil */
     gap: 1rem; /* Espaçamento entre os elementos flex */
 }
 
@@ -44,6 +49,7 @@ header {
 
 header h1 {
     font-size: 1.5rem; /* Tamanho da fonte */
+    font-family: 'Poppins', sans-serif;
     margin: 0; /* Remove a margem padrão */
     font-weight: 500; /* Peso da fonte (médio) */
     white-space: nowrap; /* Impede a quebra de linha do texto */
@@ -52,26 +58,26 @@ header h1 {
 div input {
     padding: 0.375rem 0.75rem; /* Espaçamento interno */
     border-radius: 1rem; /* Arredonda as bordas */
-    border: 1px solid var(--tertiary-color); /* Define a borda */
-    background: var(--bg-color); /* Cor de fundo */
+    border: 1px solid var(--border-color); /* Define a borda */
+    background: var(--surface-color); /* Cor de fundo */
     font-family: inherit; /* Herda a família da fonte do elemento pai */
-    font-size: 1.5rem; /* Tamanho da fonte */
+    font-size: 1rem; /* Tamanho da fonte */
     transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
     width: 30rem; /* Largura do input */
-    color: var(--secondary-color); /* Cor do texto digitado */
+    color: var(--text-primary); /* Cor do texto digitado */
     margin-right: .5rem; /* Margem à direita */
 }
 
 div input::placeholder {
-    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
+    font-size: 1rem; /* Tamanho da fonte do placeholder */
     font-weight: 300; /* Peso da fonte do placeholder */
-    color: var(--tertiary-color); /* Cor do texto do placeholder */
+    color: var(--text-secondary); /* Cor do texto do placeholder */
 }
 
 div input:focus {
     outline: none; /* Remove a borda de foco padrão */
-    border-color: var(--bg-color); /* Muda a cor da borda ao focar */
-    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
+    border-color: var(--primary-color); /* Muda a cor da borda ao focar */
+    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra de caixa para indicar foco */
 }
 
 #botao-busca {
@@ -84,14 +90,14 @@ div input:focus {
     font-size: 1rem; /* Tamanho da fonte */
     white-space: nowrap; /* Impede a quebra de linha do texto */
     transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
-    background-color: var(--bg-color); /* Cor de fundo */
-    color: var(--secondary-color); /* Cor do texto */
-    border: 1px solid var(--bg-color); /* Adiciona uma borda */
+    background-color: var(--primary-color); /* Cor de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    border: 1px solid var(--primary-color); /* Adiciona uma borda */
 }
 
 #botao-busca:hover {
-    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
-    color: var(--bg-color); /* Muda a cor do texto ao passar o mouse */
+    background-color: transparent; /* Muda a cor de fundo ao passar o mouse */
+    color: var(--primary-color); /* Muda a cor do texto ao passar o mouse */
     box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra de caixa */
 }
 
@@ -104,8 +110,9 @@ div input:focus {
     justify-content: center;
     gap: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #000000;
-    border-bottom: 1px solid var(--bg-color);
+    background-color: rgba(18, 18, 18, 0.8); /* Fundo com leve transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 133px; /* Altura do header. Ajuste se o header mudar de tamanho */
     z-index: 9;
@@ -113,10 +120,11 @@ div input:focus {
 }
 
 .categorias-nav a {
-    color: var(--secondary-color);
+    color: var(--text-primary);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
+    font-weight: 500;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -134,59 +142,63 @@ main {
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de largura igual */
+    display: grid; /* Cria duas colunas de largura igual */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem; /* Espaçamento entre os cards */
 }
 
 article {
-    background: none; /* Sem cor de fundo */
-    border-radius: 0; /* Sem bordas arredondadas */
-    padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
-    margin-bottom: 1.25rem; /* Margem inferior */
-    box-shadow: none; /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
-    border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+    background: var(--surface-color); /* Fundo para o card */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a imagem não saia das bordas */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    border: 1px solid var(--border-color);
 }
 
 article:hover {
-    transform: scale(1.01); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     cursor: pointer; /* Muda o cursor para uma mão */
 }
 
 article img {
-    width: 40%; /* Faz a imagem ocupar toda a largura do 'article' */
-    height: 200px; /* Define uma altura fixa para todas as imagens */
-    display: block; /* Remove espaços extras abaixo da imagem */
-    margin: 0 auto 1rem; /* Centraliza a imagem e adiciona uma margem inferior */
-    border-radius: 0.5rem; /* Arredonda as bordas da imagem */
+    width: 100%; /* Faz a imagem ocupar toda a largura do 'article' */
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: contain; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o conteúdo crescer para preencher o espaço */
 }
 
 article h2 {
     margin-top: 0; /* Remove a margem superior */
     font-weight: 600; /* Peso da fonte */
-    font-size: 1.6rem; /* Tamanho da fonte */
-    border-bottom: none; /* Sem borda inferior */
-    padding-bottom: 0; /* Sem espaçamento interno inferior */
+    font-size: 1.2rem; /* Tamanho da fonte */
     margin-bottom: 0.25rem; /* Margem inferior */
-    color: #898d94; /* Cor do título do produto (alterada para branco-acinzentado) */
+    color: var(--text-primary);
+    flex-grow: 1; /* Empurra o conteúdo abaixo para o final */
 }
 
 article p {
     margin: 0.5rem 0; /* Margem superior e inferior */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
-    font-size: 1rem; /* Tamanho da fonte */
+    font-size: 0.9rem; /* Tamanho da fonte */
     margin-bottom: 0.5rem; /* Margem inferior */
-    color: #BDC1C6; /* Cor da descrição do produto (alterada para cinza claro) */
+    color: var(--text-secondary); /* Cor da descrição do produto */
 }
 
 .botao-adicionar {
     padding: 0.75rem 1.5rem; /* Espaçamento interno */
     border-radius: 0.5rem; /* Bordas arredondadas */
-    border: 1px solid var(--primary-color); /* Borda com a cor primária */
-    background-color: transparent; /* Fundo transparente */
+    border: none;
+    background-color: var(--primary-color); /* Fundo com a cor primária */
     color: var(--primary-color); /* Cor do texto */
     cursor: pointer; /* Cursor de mão ao passar por cima */
     font-family: inherit; /* Usa a mesma fonte do site */
@@ -196,13 +208,13 @@ article p {
 }
 
 .botao-adicionar:hover {
-    background-color: var(--primary-color); /* Muda o fundo ao passar o mouse */
-    color: var(--bg-color); /* Muda a cor do texto */
+    background-color: #f0b06a; /* Tom mais claro da cor primária */
+    color: var(--bg-color);
 }
 
 
 article p strong {
-    color: var(--tertiary-color); /* Cor do texto em negrito */
+    color: var(--text-secondary); /* Cor do texto em negrito */
     font-weight: 400; /* Peso da fonte */
 }
 
@@ -219,7 +231,7 @@ article a:hover {
 .footer {
     /* O posicionamento absoluto foi removido para que o rodapé siga o fluxo normal da página */
     width: 100%; /* Largura total */
-    color: var(--tertiary-color); /* Cor do texto */
+    color: var(--text-secondary); /* Cor do texto */
     background-color: var(--bg-color); /* Cor de fundo */
     padding: 15px 20px; /* Espaçamento interno */
     border-top: 1px solid #3c4043; /* Borda superior */
@@ -240,7 +252,7 @@ article a:hover {
 }
 
 .footer-links a {
-    color: var(--secondary-color); /* Cor do link */
+    color: var(--text-primary); /* Cor do link */
     text-decoration: none; /* Remove o sublinhado */
     transition: color 0.2s; /* Transição suave para a cor */
 }
@@ -288,13 +300,13 @@ article a:hover {
 }
 
 .modal-conteudo {
-    background-color: #202124; /* Cor de fundo do modal */
+    background-color: var(--surface-color); /* Cor de fundo do modal */
     margin: 15% auto; /* Centraliza verticalmente e horizontalmente */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid var(--border-color);
     width: 80%; /* Largura do modal */
     max-width: 500px; /* Largura máxima */
-    border-radius: 10px;
+    border-radius: 8px;
     color: #E8EAED;
 }
 
@@ -302,7 +314,7 @@ article a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #3c4043;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
 }
 
@@ -332,7 +344,7 @@ article a:hover {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
-    border-bottom: 1px solid #303134;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .item-carrinho span:first-child {
@@ -360,7 +372,7 @@ article a:hover {
 
 .modal-rodape {
     padding-top: 15px;
-    border-top: 1px solid #3c4043;
+    border-top: 1px solid var(--border-color);
     text-align: right;
 }
 
@@ -406,7 +418,7 @@ article a:hover {
 #botao-copiar {
     padding: 0.5rem 1rem;
     margin-top: 10px;
-    background-color: var(--tertiary-color); /* Cor ajustada para diferenciar */
+    background-color: var(--text-secondary); /* Cor ajustada para diferenciar */
     color: white;
     border: none;
     border-radius: 4px;
@@ -447,8 +459,8 @@ article a:hover {
     }
 
     .card-container {
-        grid-template-columns: 1fr; /* Volta para uma coluna em telas menores */
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
     }
 
     header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
@@ -468,10 +480,6 @@ article a:hover {
     article:hover { /* Estilos para o article em telas menores */
         transform: none; /* Remove o efeito de escala ao passar o mouse */
     }
-    article img { /* Adicionado para telas menores */
-        width: 50%; /* A imagem fica um pouco maior em relação ao card */
-        height: 150px; /* A altura da imagem é reduzida */
-    }
 }
 
 @media (max-width: 480px) {
@@ -486,7 +494,7 @@ article a:hover {
     }
 
     article h2 { /* Estilos para o h2 do article em telas muito pequenas */
-        font-size: 1.3rem; /* Reduz o tamanho da fonte */
+        font-size: 1.1rem; /* Reduz o tamanho da fonte */
     }
 
     div { /* Estilos para a div do cabeçalho em telas muito pequenas */
