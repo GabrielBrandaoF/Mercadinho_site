@@ -35,6 +35,41 @@
     "categoria": "mercearia"
 },
 {
+    "nome": "Farinha de Trigo Integral Dona Benta (1kg)",
+    "imagem": "imagens/farinha.jpg",
+    "preco": "4.50",
+    "descricao": "Farinha de trigo integral, rica em fibras para receitas mais saudáveis.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Sal Refinado Cisne (1kg)",
+    "imagem": "imagens/sal.jpg",
+    "preco": "2.99",
+    "descricao": "Sal refinado iodado, essencial para temperar e conservar alimentos.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Milho de Pipoca Yoki (500g)",
+    "imagem": "imagens/milho.jpg",
+    "preco": "5.80",
+    "descricao": "Milho de pipoca premium, rende muito e faz pipocas crocantes e saudáveis.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Leite Condensado Moça (395g)",
+    "imagem": "imagens/leitecondensado.jpg",
+    "preco": "4.75",
+    "descricao": "Leite condensado tradicional, perfeito para doces e sobremesas.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Chocolate em Pó Quik (400g)",
+    "imagem": "imagens/chocolate.jpg",
+    "preco": "8.99",
+    "descricao": "Chocolate em pó solúvel, cremoso e delicioso para bebidas quentes.",
+    "categoria": "mercearia"
+},
+{
     "nome": "Leite Integral Italac (1L)",
     "imagem": "imagens/leite.jpg",
     "preco": "5.19",
@@ -89,5 +124,75 @@
     "preco": "6.25",
     "descricao": "Versão em sachê, prática e compacta. Leite integral que dissolve bem, rico em cálcio e vitaminas.",
     "categoria": "laticinios"
+},
+{
+    "nome": "Macarrão Espaguete Renata (500g)",
+    "imagem": "imagens/macarrao.jpg",
+    "preco": "3.99",
+    "descricao": "Macarrão espaguete de trigo, ideal para diversas receitas.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Sabonete Lux Suave (85g)",
+    "imagem": "imagens/sabonete.jpg",
+    "preco": "2.20",
+    "descricao": "Sabonete suave para uso diário, fragrância delicada.",
+    "categoria": "higiene"
+},
+{
+    "nome": "Desinfetante Pinho Sol (500ml)",
+    "imagem": "imagens/desinfetante.jpg",
+    "preco": "5.50",
+    "descricao": "Desinfetante multiuso, aroma de pinho, limpa e perfuma.",
+    "categoria": "limpeza"
+},
+{
+    "nome": "Biscoito Cream Cracker Marilan (200g)",
+    "imagem": "imagens/biscoito.jpg",
+    "preco": "3.25",
+    "descricao": "Biscoito salgado, crocante e leve, perfeito para lanches.",
+    "categoria": "mercearia"
+},
+{
+    "nome": "Água Mineral Crystal (1,5L)",
+    "imagem": "imagens/agua.jpg",
+    "preco": "2.80",
+    "descricao": "Água mineral natural, ideal para hidratação diária.",
+    "categoria": "bebidas"
+},
+{
+    "nome": "Shampoo Seda Liso Perfeito (250ml)",
+    "imagem": "imagens/shampoo.jpg",
+    "preco": "7.99",
+    "descricao": "Shampoo para cabelos lisos, deixa macio e brilhante.",
+    "categoria": "higiene"
+},
+{
+    "nome": "Condicionador Seda Liso Perfeito (250ml)",
+    "imagem": "imagens/condicionador.jpg",
+    "preco": "7.99",
+    "descricao": "Condicionador que hidrata e reduz o frizz dos cabelos.",
+    "categoria": "higiene"
+},
+{
+    "nome": "Desodorante Rexona Aerosol Men (85ml)",
+    "imagem": "imagens/desodorante.jpg",
+    "preco": "18.50",
+    "descricao": "Desodorante antitranspirante com aroma marcante e proteção 48h.",
+    "categoria": "higiene"
+},
+{
+    "nome": "Escova de Dentes Colgate Zigzag (2 unidades)",
+    "imagem": "imagens/escova.jpg",
+    "preco": "3.50",
+    "descricao": "Escova de dentes com cerdas macias, remove placa e protege as gengivas.",
+    "categoria": "higiene"
+},
+{
+    "nome": "Enxaguante Bucal Listerine (500ml)",
+    "imagem": "imagens/enxaguante.jpg",
+    "preco": "12.90",
+    "descricao": "Enxaguante bucal com flúor, elimina bactérias e deixa hálito fresco.",
+    "categoria": "higiene"
 }
 ]
